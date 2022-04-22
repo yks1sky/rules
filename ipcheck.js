@@ -15,11 +15,11 @@ $httpClient.get(url, function(error, response, data){
     let country = jsonData.country
     let emoji = getFlagEmoji(jsonData.countryCode)
     let city = jsonData.city
-    let isp = jsonData.isp
+    let isp = jsonData.asname
     
   body = {
     title: "网络信息",
-    content: `IP信息: ${ip}\n运营商: ${asname}\nIP位置: ${emoji}${country} - ${city}`,
+    content: `IP信息: ${ip}\n运营商: ${isp}\nIP位置: ${emoji}${country} - ${city}`,
     icon: "link.icloud",
     'icon-color': "#5AC8FA"
   }
