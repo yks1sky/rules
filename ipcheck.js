@@ -15,11 +15,22 @@ $httpClient.get(url, function(error, response, data){
     let country = jsonData.country
     let emoji = getFlagEmoji(jsonData.countryCode)
     let city = jsonData.city
+    let isp = jsonData.isp
     let asname = jsonData.asname
-    
+
+  function ISP_ValidCheck(para) {
+  if(para) {
+  return para
+  } else
+  {
+  return asname
+//emojis[getRandomInt(emojis.length)]
+  }
+}  
+    let result = ISP_ValidCheck(isp)
   body = {
     title: "网络信息",
-    content: `IP信息: ${ip}\n运营商: ${asname}\nIP位置: ${emoji}${country} - ${city}`,
+    content: `IP信息: ${ip}\n运营商: ${result}\nIP位置: ${emoji}${country} - ${city}`,
     icon: "link.icloud",
     'icon-color': "#5AC8FA"
   }
@@ -34,3 +45,4 @@ function getFlagEmoji(countryCode) {
       .map(char =>  127397 + char.charCodeAt());
     return String.fromCodePoint(...codePoints);
 }
+
