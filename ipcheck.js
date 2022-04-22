@@ -7,7 +7,7 @@ https://raw.githubusercontent.com/congcong0806/surge-list/master/Script/ipcheck.
 * 网络信息 = type=generic,timeout=3,script-path=https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/ipcheck.js
 */
 
-let url = "ip-api.com/json/?fields=status,message,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as,asname,query&lang=zh-CN"
+let url = "http://ip-api.com/json/?fields=status,message,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as,asname,query&lang=zh-CN"
 
 $httpClient.get(url, function(error, response, data){
     let jsonData = JSON.parse(data)
