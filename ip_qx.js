@@ -24,7 +24,7 @@ function ISP_ValidCheck(para) {
   return para
   } else
   {
-  return asname
+  return (obj['asname']
 //emojis[getRandomInt(emojis.length)]
   }
 }
