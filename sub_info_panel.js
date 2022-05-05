@@ -38,14 +38,14 @@ let args = getArgs();
   let used = info.download + info.upload;
   let total = info.total;
   let expire = args.expire || info.expire;
-  let content = [`𝗨𝘀𝗮𝗴𝗲:${bytesToSize(used)} | ${bytesToSize(total)}`];
+  let content = [`𝗨𝘀𝗮𝗴𝗲: ${bytesToSize(used)} | ${bytesToSize(total)}`];
 
 /*  if (resetDayLeft) {
     content.push(`重置：剩余${resetDayLeft}天`);
   }*/
   if (expire && expire !== "false") {
     if (/^[\d.]+$/.test(expire)) expire *= 1000;
-    content.push(`𝗘𝘅𝗽𝗶𝗿𝗲𝗱:${formatTime(expire)}`);
+    content.push(`𝗘𝘅𝗽𝗶𝗿𝗲𝗱: ${formatTime(expire)}`);
   }
 
   let now = new Date();
