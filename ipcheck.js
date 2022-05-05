@@ -7,7 +7,7 @@ https://raw.githubusercontent.com/congcong0806/surge-list/master/Script/ipcheck.
 * 网络信息 = type=generic,timeout=3,script-path=https://raw.githubusercontent.com/TributePaulWalker/Profiles/main/JavaScript/Surge/ipcheck.js
 */
 
-let url = "http://ip-api.com/json/?fields=status,message,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as,asname,query&lang=zh-CN"
+let url = "http://ip-api.com/json/?fields=status,message,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as,asname,query"
 
 $httpClient.get(url, function(error, response, data){
     let jsonData = JSON.parse(data)
@@ -29,10 +29,10 @@ $httpClient.get(url, function(error, response, data){
 }  
     let result = ISP_ValidCheck(org)
   body = {
-    title: "网络信息",
-    content: `IP信息: ${ip}\n运营商: ${result}\nIP位置: ${emoji}${country} - ${city}`,
+    title: "𝗜𝗣_𝗜𝗡𝗙𝗢",
+    content: `𝗜𝗣: ${ip}\n𝗜𝗦𝗣: ${result}\n𝗟𝗼𝗰𝗮𝘁𝗶𝗼𝗻: ${emoji}${country} - ${city}`,
     icon: "link.icloud",
-    'icon-color': "#5AC8FA"
+    'icon-color': "#007aff"
   }
   $done(body);
 });
