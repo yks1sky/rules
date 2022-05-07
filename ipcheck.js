@@ -32,7 +32,7 @@ $httpClient.get(url, function(error, response, data){
     title: "𝗜𝗣_𝗜𝗡𝗙𝗢",
     content: `𝗜𝗣: ${ip}\n𝗜𝗦𝗣: ${result}\n𝗟𝗼𝗰𝗮𝘁𝗶𝗼𝗻: ${emoji}${country} - ${city}`,
     icon: "link.icloud",
-    'icon-color': "#007aff"
+    'icon-color': "#0047AB"
   }
   $done(body);
 });
