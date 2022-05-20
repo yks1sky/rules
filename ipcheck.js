@@ -18,6 +18,7 @@ $httpClient.get(url, function(error, response, data){
     let org = jsonData.org
     let isp = jsonData.isp
     let asname = jsonData.asname
+    let as = jsonData.as
 
   function ISP_ValidCheck(para) {
   if(para) {
@@ -28,7 +29,7 @@ $httpClient.get(url, function(error, response, data){
 //emojis[getRandomInt(emojis.length)]
   }
 }  
-    let result = ISP_ValidCheck(asname)
+    let result = ISP_ValidCheck(as)
   body = {
     title: "𝗜𝗣_𝗜𝗡𝗙𝗢",
     content: `𝗜𝗣: ${ip}\n𝗜𝗦𝗣: ${result}\n𝗟𝗼𝗰𝗮𝘁𝗶𝗼𝗻: ${emoji}${country} - ${city}`,
