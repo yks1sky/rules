@@ -45,7 +45,7 @@ let args = getArgs();
   }*/
   if (expire && expire !== "false") {
     if (/^[\d.]+$/.test(expire)) expire *= 1000;
-    content.push(`𝗘𝘅𝗽𝗶𝗿𝗲𝗱: ${formatTime(expire)}`);
+    content.push(`𝗘𝘅𝗽𝗶𝗿𝗲: ${formatTime(expire)}`);
   }
 
   let now = new Date();
